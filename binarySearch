@@ -1,0 +1,31 @@
+#include<stdio.h>
+int main ()
+{
+    int a[10],l,h,mid,f=0,n,s,i;
+    printf("Enter the n value: ");
+    scanf("%d",&n);
+    printf("Enter %d elements: ");
+    for(i=0;i<n;i++)
+    scanf("%d",&a[i]);
+    printf("Enter the s value: ");
+    scanf("%d",&s);
+    l=0,h=n-1;
+    while(l<=h)
+    {
+        mid=(l+h)/2;
+        if(s==a[mid])
+    {
+        printf("Search elements found at %dth position",mid);
+        f=1;
+        break;
+    }
+    else if (s<a[mid])
+    h=mid-1;
+    else if (s>a[mid])
+    l=mid+1;
+    }
+    if(f==0)
+    printf("Sorry! Search element is not found");
+    return 0;
+
+}
