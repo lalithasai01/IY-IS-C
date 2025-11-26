@@ -1,0 +1,10 @@
+#include<stdio.h>
+void main()
+{
+    int a=100,b=58,c=69,d=72,e=68,f,g;
+    f=a+b+c+d+e;
+    g=f/5;
+    printf("sum is %d\n",f);
+    printf("average is %d",g);
+
+}
